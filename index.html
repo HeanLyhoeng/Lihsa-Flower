@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en" id="htmlLang">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chet Lisha | Flowers & Blooms</title>
+    <meta name="description" content="Your local flower shop, Chet Lisha, offering fresh, beautiful flower arrangements, bouquets, and plants for every occasion." />
+    <meta name="author" content="Lyhoeng Design" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Chet Lisha | Flowers & Blooms" />
+    <meta property="og:description" content="Fresh, beautiful flower arrangements and bouquets." />
+    <meta property="og:type" content="website" />
+   
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Header and Navigation -->
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">Chet Lisha sers Laor </div>
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link" data-i18n="nav-home">Home</a></li>
+            <li><a href="#about" class="nav-link" data-i18n="nav-about">About</a></li>
+            <li><a href="#bouquets" class="nav-link" data-i18n="nav-bouquets">Bouquets (Menu)</a></li>
+            <li><a href="#gallery" class="nav-link" data-i18n="nav-gallery">Gallery</a></li>
+            <li><a href="#contact" class="nav-link" data-i18n="nav-contact">Contact</a></li>
+            <li><button class="lang-btn" id="langSwitch">EN</button></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title" data-i18n="hero-title">Beautiful Flowers for Every Occasion</h1>
+        <p class="hero-subtitle" data-i18n="hero-subtitle">Fresh blooms, expert arrangements, delivered with care</p>
+        <a href="#bouquets" class="cta-btn" data-i18n="hero-cta">Explore Our Collection</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title" data-i18n="about-title">About Us</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p id="about-text1"></p>
+            <p data-i18n="about-text2">At Chet Lisha, we believe that flowers have the power to convey emotions, celebrate milestones, and bring joy to everyday moments. Our dedicated team works tirelessly to create arrangements that exceed expectations.</p>
+          </div>
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=600&h=400&fit=crop" alt="Flower Arrangement">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bouquets (Menu) Section -->
+    <section id="bouquets" class="bouquets">
+      <div class="container">
+        <h2 class="section-title" data-i18n="bouquets-title">Our Bouquets & Products</h2>
+        <div class="products-grid">
+          <!-- Product 1: Rose Bouquet -->
+          <div class="product-card">
+            <img src="img/photo_2025-11-04_09-35-30.jpg" alt="Rose Bouquet">
+            <div class="product-info">
+              <h3 data-i18n="product-rose-title">Rose Bouquet</h3>
+              <p class="price">$2.00</p>
+              <button class="view-details-btn" onclick="showProductDetails('rose')" data-i18n="btn-view-details">View Details</button>
+            </div>
+          </div>
+
+          <!-- Product 2: Sunflower Arrangement -->
+          <div class="product-card">
+            <img src="img/Sunflower Arrangement.jpg" alt="Sunflower Arrangement">
+            <div class="product-info">
+              <h3 data-i18n="product-sunflower-title">Sunflower Arrangement</h3>
+              <p class="price">$1.50</p>
+              <button class="view-details-btn" onclick="showProductDetails('sunflower')" data-i18n="btn-view-details">View Details</button>
+            </div>
+          </div>
+
+          <!-- Product 3: Tulip Vase -->
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=300&h=300&fit=crop" alt="Tulip Vase">
+            <div class="product-info">
+              <h3 data-i18n="product-tulip-title">Tulip Vase</h3>
+              <p class="price">$2.60</p>
+              <button class="view-details-btn" onclick="showProductDetails('tulip')" data-i18n="btn-view-details">View Details</button>
+            </div>
+          </div>
+
+          <!-- Product 4: Mixed Bouquet -->
+          <div class="product-card">
+            <img src="img/Mixed Bouquet.jpg" alt="Mixed Bouquet">
+            <div class="product-info">
+              <h3 data-i18n="product-mixed-title">Mixed Bouquet</h3>
+              <p class="price">$2.50</p>
+              <button class="view-details-btn" onclick="showProductDetails('mixed')" data-i18n="btn-view-details">View Details</button>
+            </div>
+          </div>
+
+          <!-- Product 5: Orchid Plant -->
+          <div class="product-card">
+            <img src="img/Orchid Plant.jpg" alt="Orchid Plant">
+            <div class="product-info">
+              <h3 data-i18n="product-orchid-title">Orchid Plant</h3>
+              <p class="price">$3.00</p>
+              <button class="view-details-btn" onclick="showProductDetails('orchid')" data-i18n="btn-view-details">View Details</button>
+            </div>
+          </div>
+
+          <!-- Product 6: Sympathy Flowers -->
+          <div class="product-card">
+            <img src="img/Sympathy Flowers.jpg" alt="Sympathy Flowers">
+            <div class="product-info">
+              <h3 data-i18n="product-sympathy-title">Sympathy Flowers</h3>
+              <p class="price">$0.70</p>
+              <button class="view-details-btn" onclick="showProductDetails('sympathy')" data-i18n="btn-view-details">View Details</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="img/Sympathy Flowers.jpg" alt="Sympathy Flowers">
+            <div class="product-info">
+              <h3 data-i18n="product-sympathy-title">Sympathy Flowers</h3>
+              <p class="price">$0.70</p>
+              <button class="view-details-btn" onclick="showProductDetails('sympathy')" data-i18n="btn-view-details">View Details</button>
+            </div>
+          </div>
+
+          <!-- Product 7: Seasonal Wreath -->
+          <div class="product-card">
+            <img src="img/Seasonal Wreath.jpg" alt="Seasonal Wreath">
+            <div class="product-info">
+              <h3 data-i18n="product-wreath-title">Seasonal Wreath</h3>
+              <p class="price">$2.90</p>
+              <button class="view-details-btn" onclick="showProductDetails('wreath')" data-i18n="btn-view-details">View Details</button>
+            </div>
+
+            
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Details Modal -->
+      <div id="productModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div id="modalBody"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Premium Quality Section -->
+    <section class="premium">
+      <div class="container">
+        <h2 class="section-title" data-i18n="premium-title">Premium Quality Blooms</h2>
+        <div class="premium-content">
+          <div class="premium-image">
+            <img src="img/Boho flora.jpg" alt="Premium Flowers">
+          </div>
+          <div class="premium-text">
+            <h3 data-i18n="premium-h3">Expertly Sourced Fresh Blooms</h3>
+            <p data-i18n="premium-text1">We work directly with premium growers to bring you the finest selection of flowers including:</p>
+            <ul class="premium-list">
+              <li data-i18n="premium-item1">🌹 Premium Roses</li>
+              <li data-i18n="premium-item2">🌺 Elegant Lilies</li>
+              <li data-i18n="premium-item3">🌸 Exotic Orchids</li>
+              <li data-i18n="premium-item4">🌿 Beautiful Hydrangeas</li>
+              <li data-i18n="premium-item5">🍃 Seasonal Greens</li>
+            </ul>
+            <p data-i18n="premium-text2">Each arrangement is carefully crafted by our experienced florists who understand the art of creating stunning floral designs that capture your vision.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <h2 class="section-title" data-i18n="gallery-title">Our Gallery</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="img/flat-lay-flower-press-with-white-background.jpg" alt="Rose Bouquet">
+          </div>
+          <div class="gallery-item">
+            <img src="img/Sunflower Arrangement.jpg" alt="Sunflower Arrangement">
+          </div>
+          <div class="gallery-item">
+            <img src="img/Mixed Bouquet.jpg" alt="Tulip Vase">
+          </div>
+          <div class="gallery-item">
+            <img src="img/Mixed Bouquet.jpg" alt="Mixed Bouquet">
+          </div>
+          <div class="gallery-item">
+            <img src="img/Seasonal Wreath.jpg" alt="Orchid Plant">
+          </div>
+          <div class="gallery-item">
+            <img src="img/Sympathy Flowers.jpg" alt="Sympathy Flowers">
+          </div>
+          <div class="gallery-item">
+            <img src="img/Sunflower Arrangement.jpg" alt="Sunflower Arrangement">
+          </div>
+          <div class="gallery-item">
+            <img src="img/Mixed Bouquet.jpg" alt="Tulip Vase">
+          </div>
+          <div class="gallery-item">
+            <img src="img/Mixed Bouquet.jpg" alt="Mixed Bouquet">
+          </div>
+          <div class="gallery-item">
+            <img src="img/Seasonal Wreath.jpg" alt="Orchid Plant">
+          </div>
+          <div class="gallery-item">
+            <img src="img/Sympathy Flowers.jpg" alt="Sympathy Flowers">
+          </div>
+          <div class="gallery-item">
+            <img src="img/Seasonal Wreath.jpg" alt="Orchid Plant">
+          </div>
+          <div class="gallery-item">
+            <img src="img/Sympathy Flowers.jpg" alt="Sympathy Flowers">
+          </div>
+          <div class="gallery-item">
+            <img src="img/Seasonal Wreath.jpg" alt="Orchid Plant">
+          </div>
+          <div class="gallery-item">
+            <img src="img/Sympathy Flowers.jpg" alt="Sympathy Flowers">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title" data-i18n="contact-title">Send Us a Message</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3 data-i18n="contact-h3">Get in Touch</h3>
+            <p data-i18n="contact-text">Have a question about our flowers or need help with a custom arrangement? We'd love to hear from you!</p>
+            <div class="contact-details">
+              <p><strong data-i18n="contact-phone-label">📞 Phone:</strong> +855 12 345 678</p>
+              <p><strong data-i18n="contact-email-label">✉️ Email:</strong> info@chetlishaflowers.com</p>
+            </div>
+          </div>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name" data-i18n="form-name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email" data-i18n="form-email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message" data-i18n="form-message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn" data-i18n="form-submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Flower Shop Branding -->
+          <div class="footer-section">
+            <div class="footer-logo">
+              <h3>🌸 Chet Lisha Flowers</h3>
+              <p class="slogan">Premium Flowers & Floral Design</p>
+            </div>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <p>📞 +855 12 345 678</p>
+            <p>✉️ info@chetlishaflowers.com</p>
+          </div>
+
+          <!-- Social Media -->
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/share/1BtFziQkpz/?mibextid=wwXIfr" class="social-icon" aria-label="Facebook" target="_blank">
+                <img src="img/Facebook icon.webp" alt="Facebook">
+            </a>
+            
+            <a href="https://www.instagram.com/chet_lyzah?igsh=eDczMWNybjZ2Mmxq" class="social-icon" aria-label="Instagram" target="_blank">
+                <img src="img/instagram-vector-logo-icon-social-media-logotype_901408-392.avif" alt="Instagram">
+            </a>
+            
+            <a href="https://www.youtube.com/watch?v=B9l1_Ce1Fqc" class="social-icon" aria-label="YouTube" target="_blank">
+                <img src="img/youtube icon.webp" alt="YouTube">
+            </a>
+            </div>
+          </div>
+
+          <!-- Academic Project Information -->
+          <div class="footer-section academic-box academic-box-centered">
+            <div class="school-logo">
+              <img src="img/logo etec.png" alt="School Logo">
+            </div>
+            <!-- Student ID Card (4x6) -->
+            <div class="student-id-card">
+              <div class="id-card-photo">
+                <img src="img/photo_2025-11-04_09-35-30.jpg" alt="Student Photo" id="studentPhoto">
+              </div>
+            </div>
+            <!-- Academic Information Box -->
+            <div class="academic-info-box">
+              <h4 class="academic-info-title"></h4>
+              <div class="academic-info-content">
+                <p><strong data-i18n="footer-lecturer-label">Lecturer by:</strong> <span data-i18n="footer-lecturer-value">Kru wwe</span></p>
+                <p><strong data-i18n="footer-student-label">Name Student:</strong> <span data-i18n="footer-student-value">Chet Lisha</span></p>
+                <p><strong data-i18n="footer-class-label">Class:</strong> <span data-i18n="footer-class-value">SW8</span></p>
+                <p><strong data-i18n="footer-year-label">Year:</strong> <span data-i18n="footer-year-value">Year 1 Semester 2</span></p>
+                <p><strong data-i18n="footer-subject-label">Subject:</strong> <span data-i18n="footer-subject-value">Web Development</span></p>
+                <p><strong data-i18n="footer-exam-label">Final Exam:</strong> <span data-i18n="footer-exam-value">13 October 2025</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 <span data-i18n="footer-copyright">Chet Lisha Flowers. All rights reserved.</span></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Product Details Modal -->
+    <script>
+      const productDetails = {
+        rose: {
+          title: "Rose Bouquet",
+          price: "$35.00",
+          description: "A classic and romantic arrangement featuring our finest premium roses. Perfect for expressing love, appreciation, or making a memorable gesture. Hand-tied and wrapped in elegant, sustainable paper.",
+          mainFlowers: "6 x Premium Red/Pink Roses",
+          fillerFlowers: "White Baby's Breath (Gypsophila)",
+          foliage: "Fresh Eucalyptus Greens",
+          vase: "Not included (Option to add a vase is available)",
+          careInstructions: "Trim the stems at a 45-degree angle. Change the water daily and use the provided flower food. Keep away from direct sunlight and drafts. Change water every 2-3 days, remove leaves below water line.",
+          longevity: "Optimal Freshness: 5–7 days with proper care. Seasonal Availability: Available year-round.",
+          sizes: "Small (6-8 roses), Medium (12 roses), Large (18-24 roses)"
+        },
+        sunflower: {
+          title: "Sunflower Arrangement",
+          price: "$40.00",
+          description: "Bright and cheerful sunflowers that bring sunshine into any room. An uplifting gift for birthdays, graduations, or just to brighten someone's day. Hand-tied and wrapped in elegant, sustainable paper.",
+          mainFlowers: "6 x Sunflowers, 4 x Bright Yellow Roses, 5 x Blue Delphinium stalks",
+          fillerFlowers: "White Baby's Breath (Gypsophila)",
+          foliage: "Fresh Eucalyptus and Fern fronds",
+          vase: "Not included (Option to add a vase is available)",
+          careInstructions: "Trim the stems at a 45-degree angle. Change the water daily and use the provided flower food. Keep away from direct sunlight and drafts. Keep water clean and fresh, place in bright indirect light, trim stems every few days.",
+          longevity: "Optimal Freshness: 5–7 days with proper care. Seasonal Availability: Available May through October.",
+          sizes: "Standard (5-7 sunflowers), Large (10-12 sunflowers)"
+        },
+        tulip: {
+          title: "Tulip Vase",
+          price: "$28.00",
+          description: "Elegant tulips in a beautiful vase arrangement. These spring favorites add a touch of sophistication to any space. Hand-tied and wrapped in elegant, sustainable paper.",
+          mainFlowers: "12 x Mixed Color Tulips (Red, Yellow, Pink, White)",
+          fillerFlowers: "None",
+          foliage: "Fern Leaves",
+          vase: "Included (Beautiful glass vase)",
+          careInstructions: "Trim the stems at a 45-degree angle. Change the water daily and use the provided flower food. Keep away from direct sunlight and drafts. Keep in cool water, replace water every 2 days, tulips will continue to grow in the vase.",
+          longevity: "Optimal Freshness: 4–6 days with proper care. Seasonal Availability: Available March through May.",
+          sizes: "Medium (12 tulips), Large (18 tulips)"
+        },
+        mixed: {
+          title: "Mixed Bouquet",
+          price: "$45.00",
+          description: "A vibrant and diverse arrangement combining various seasonal blooms. Our most popular choice for those who want a little bit of everything. Perfect for expressing joy, gratitude, or celebrating a new beginning.",
+          mainFlowers: "6 x Roses, 4 x Lilies, 5 x Carnations",
+          fillerFlowers: "White Baby's Breath (Gypsophila)",
+          foliage: "Fresh Eucalyptus, Seasonal Greens",
+          vase: "Not included (Option to add a vase is available)",
+          careInstructions: "Trim the stems at a 45-degree angle. Change the water daily and use the provided flower food. Keep away from direct sunlight and drafts. Change water every 2-3 days, remove wilted flowers, keep away from fruits (they emit ethylene gas).",
+          longevity: "Optimal Freshness: 5–7 days with proper care. Seasonal Availability: Available year-round.",
+          sizes: "Medium (Mixed 15-20 stems), Large (Mixed 25-30 stems)"
+        },
+        orchid: {
+          title: "Orchid Plant",
+          price: "$50.00",
+          description: "A beautiful living orchid plant that blooms for weeks. An elegant and long-lasting gift for any occasion. Perfect for expressing appreciation and lasting friendship.",
+          mainFlowers: "White/Purple Phalaenopsis Orchids (Living Plant)",
+          fillerFlowers: "None",
+          foliage: "Orchid leaves and natural moss",
+          vase: "Included (Decorative ceramic pot)",
+          careInstructions: "Water once a week (submerge roots for 15 minutes), place in bright indirect light, maintain room temperature 65-75°F. Avoid overwatering and direct sunlight.",
+          longevity: "Blooming Period: 4-8 weeks. Plant longevity: With proper care, can bloom multiple times per year.",
+          sizes: "Single stem, Double stem"
+        },
+        sympathy: {
+          title: "Sympathy Flowers",
+          price: "$38.00",
+          description: "A thoughtful and respectful arrangement designed to express condolences and comfort. Elegantly styled with white and soft pastel blooms. Hand-tied and wrapped in elegant, sustainable paper.",
+          mainFlowers: "6 x White Lilies, 4 x White Roses",
+          fillerFlowers: "White Baby's Breath (Gypsophila)",
+          foliage: "Fern Leaves, Eucalyptus",
+          vase: "Not included (Option to add a vase is available)",
+          careInstructions: "Trim the stems at a 45-degree angle. Change the water daily and use the provided flower food. Keep away from direct sunlight and drafts. Change water every 2-3 days, place in a serene location, trim stems regularly.",
+          longevity: "Optimal Freshness: 5–7 days with proper care. Seasonal Availability: Available year-round.",
+          sizes: "Standard (Sympathy Basket), Large (Standing Spray)"
+        },
+        wreath: {
+          title: "Seasonal Wreath",
+          price: "$25.00",
+          description: "A beautiful decorative wreath that changes with the seasons. Perfect for home decoration, door hanging, or special events. Handcrafted with care and attention to detail.",
+          mainFlowers: "Seasonal Flowers (varies by season)",
+          fillerFlowers: "Dried Baby's Breath",
+          foliage: "Dried Greens, Natural Elements",
+          vase: "Not applicable (Wreath form included)",
+          careInstructions: "Keep in a dry area, gentle dusting as needed. Dried elements may last for months. Avoid direct sunlight and moisture to preserve color and shape.",
+          longevity: "Durability: 3-6 months with proper care. Seasonal Availability: Available year-round with seasonal flower variations.",
+          sizes: "Standard (12 inch), Large (18 inch)"
+        }
+      };
+
+      const modal = document.getElementById('productModal');
+      const modalBody = document.getElementById('modalBody');
+      const closeBtn = document.querySelector('.close');
+
+      function showProductDetails(productKey) {
+        const product = productDetails[productKey];
+        if (!product) return;
+
+        modalBody.innerHTML = `
+          <div class="modal-header">
+            <h2>🌸 ${product.title}</h2>
+            <p class="modal-price">${product.price}</p>
+          </div>
+          <div class="modal-details">
+            <div class="detail-section">
+              <h4>Description</h4>
+              <p>${product.description}</p>
+            </div>
+            <div class="detail-section">
+              <h4>Ingredients (Composition)</h4>
+              <ul class="ingredients-list">
+                <li><strong>Main Flowers:</strong> ${product.mainFlowers}</li>
+                <li><strong>Filler Flowers:</strong> ${product.fillerFlowers}</li>
+                <li><strong>Foliage:</strong> ${product.foliage}</li>
+                <li><strong>Vase:</strong> ${product.vase}</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4>Care Instructions</h4>
+              <p>${product.careInstructions}</p>
+            </div>
+            <div class="detail-section">
+              <h4>Longevity/Seasonal Info</h4>
+              <p>${product.longevity}</p>
+            </div>
+            <div class="detail-section">
+              <h4>Size Options</h4>
+              <p>${product.sizes}</p>
+            </div>
+          </div>
+          <button class="order-btn" onclick="alert('Thank you! Your order has been placed. We will contact you soon!')">Order Now</button>
+        `;
+        modal.style.display = 'block';
+      }
+
+      closeBtn.onclick = function() {
+        modal.style.display = 'none';
+      }
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      }
+
+      // Language Translation System
+      const translations = {
+        en: {
+          'nav-home': 'Home',
+          'nav-about': 'About',
+          'nav-bouquets': 'Bouquets (Menu)',
+          'nav-gallery': 'Gallery',
+          'nav-contact': 'Contact',
+          'hero-title': 'Beautiful Flowers for Every Occasion',
+          'hero-subtitle': 'Fresh blooms, expert arrangements, delivered with care',
+          'hero-cta': 'Explore Our Collection',
+          'about-title': 'About Us',
+          'about-text1': 'We offer fresh, high-quality flowers and stunning floral designs for all occasions, sourced from premium growers.',
+          'about-strong1': 'fresh, high-quality flowers and stunning floral designs',
+          'about-strong2': 'premium growers',
+          'about-text2': 'At Chet Lisha, we believe that flowers have the power to convey emotions, celebrate milestones, and bring joy to everyday moments. Our dedicated team works tirelessly to create arrangements that exceed expectations.',
+          'bouquets-title': 'Our Bouquets & Products',
+          'product-rose-title': 'Rose Bouquet',
+          'product-sunflower-title': 'Sunflower Arrangement',
+          'product-tulip-title': 'Tulip Vase',
+          'product-mixed-title': 'Mixed Bouquet',
+          'product-orchid-title': 'Orchid Plant',
+          'product-sympathy-title': 'Sympathy Flowers',
+          'product-wreath-title': 'Seasonal Wreath',
+          'btn-view-details': 'View Details',
+          'premium-title': 'Premium Quality Blooms',
+          'premium-h3': 'Expertly Sourced Fresh Blooms',
+          'premium-text1': 'We work directly with premium growers to bring you the finest selection of flowers including:',
+          'premium-item1': '🌹 Premium Roses',
+          'premium-item2': '🌺 Elegant Lilies',
+          'premium-item3': '🌸 Exotic Orchids',
+          'premium-item4': '🌿 Beautiful Hydrangeas',
+          'premium-item5': '🍃 Seasonal Greens',
+          'premium-text2': 'Each arrangement is carefully crafted by our experienced florists who understand the art of creating stunning floral designs that capture your vision.',
+          'gallery-title': 'Our Gallery',
+          'contact-title': 'Send Us a Message',
+          'contact-h3': 'Get in Touch',
+          'contact-text': 'Have a question about our flowers or need help with a custom arrangement? We\'d love to hear from you!',
+          'contact-phone-label': '📞 Phone:',
+          'contact-email-label': '✉️ Email:',
+          'form-name': 'Name',
+          'form-email': 'Email',
+          'form-message': 'Message',
+          'form-submit': 'Send Message',
+          'footer-lecturer-label': 'Lecturer by:',
+          'footer-lecturer-value': 'Kru wwe',
+          'footer-student-label': 'Name Student:',
+          'footer-student-value': 'Chet Lisha',
+          'footer-class-label': 'Class:',
+          'footer-class-value': 'SW8',
+          'footer-year-label': 'Year:',
+          'footer-year-value': 'Year 1 Semester 2',
+          'footer-subject-label': 'Subject:',
+          'footer-subject-value': 'Web Development',
+          'footer-exam-label': 'Final Exam:',
+          'footer-exam-value': '13 October 2025',
+          'footer-copyright': 'Chet Lisha Flowers. All rights reserved.'
+        },
+        km: {
+          'nav-home': 'ទំព័រដើម',
+          'nav-about': 'អំពីយើង',
+          'nav-bouquets': 'ផ្កាក្នុងដប (មីនុយ)',
+          'nav-gallery': 'វិចិត្រសាល',
+          'nav-contact': 'ទំនាក់ទំនង',
+          'hero-title': 'ខ្ងុំបាទឈ្មោះ​លីសា​ ភេទប្រុស',
+          'hero-subtitle': 'ផ្កាស្រស់ៗ ការរៀបចំដោយអ្នកជំនាញ ផ្តល់ជូនដោយការថែទាំ',
+          'hero-cta': 'ស្វែងរកការប្រមូលផ្តុំរបស់យើង',
+          'about-title': 'អំពីយើង',
+          'about-text1': 'យើងផ្តល់ជូននូវផ្កាស្រស់ៗ គុណភាពខ្ពស់ និងការរចនាផ្កាដ៏ស្រស់ស្អាតសម្រាប់រាល់ឱកាស ដែលមកពីអ្នកដាំផ្កាដែលមានគុណភាពខ្ពស់។',
+          'about-strong1': 'ផ្កាស្រស់ៗ គុណភាពខ្ពស់ និងការរចនាផ្កាដ៏ស្រស់ស្អាត',
+          'about-strong2': 'អ្នកដាំផ្កាដែលមានគុណភាពខ្ពស់',
+          'about-text2': 'នៅ Chet Lisha យើងជឿថាផ្កាមានអាចផ្តល់អារម្មណ៍ អបអរសាទរនៅពេលសំខាន់ៗ និងផ្តល់ភាពសប្បាយឱ្យពេលវេលាប្រចាំថ្ងៃ។ ក្រុមការងាររបស់យើងធ្វើការដោយមិនធូរថយក្នុងការបង្កើតការរៀបចំដែលលើសពីការរំពឹងទុក។',
+          'bouquets-title': 'ផ្កាក្នុងដប និងផលិតផលរបស់យើង',
+          'product-rose-title': 'ផ្កាកុលាប',
+          'product-sunflower-title': 'ផ្កាទឹកដោះគោ',
+          'product-tulip-title': 'ផ្កាទុលីប',
+          'product-mixed-title': 'ផ្កាលាយ',
+          'product-orchid-title': 'ដើមអរខីត',
+          'product-sympathy-title': 'ផ្កាសម្រាប់ការរំភើប',
+          'product-wreath-title': 'ផ្ការដូវ',
+          'btn-view-details': 'មើលព័ត៌មានលម្អិត',
+          'premium-title': 'ផ្កាគុណភាពខ្ពស់',
+          'premium-h3': 'ផ្កាស្រស់ៗដែលបានជ្រើសរើសដោយអ្នកជំនាញ',
+          'premium-text1': 'យើងធ្វើការដោយផ្ទាល់ជាមួយអ្នកដាំផ្កាដែលមានគុណភាពខ្ពស់ដើម្បីផ្តល់ជូនអ្នកនូវការជ្រើសរើសផ្កាដ៏ល្អបំផុតរួមមាន:',
+          'premium-item1': '🌹 កុលាបគុណភាពខ្ពស់',
+          'premium-item2': '🌺 លីលីដ៏ស្រស់ស្អាត',
+          'premium-item3': '🌸 អរខីតពិសេស',
+          'premium-item4': '🌿 ហ៊ីដ្រានចេញស្រស់ស្អាត',
+          'premium-item5': '🍃 ស្លឹកប្រចាំរដូវ',
+          'premium-text2': 'ការរៀបចំនីមួយៗត្រូវបានបង្កើតដោយអ្នកជំនាញផ្ការបស់យើងដែលយល់ដឹងអំពីសិល្បៈនៃការបង្កើតការរចនាផ្កាដ៏ស្រស់ស្អាតដែលចាប់យកចិត្តរបស់អ្នក។',
+          'gallery-title': 'វិចិត្រសាលរបស់យើង',
+          'contact-title': 'ផ្ញើសារមកយើង',
+          'contact-h3': 'ទាក់ទងមកយើង',
+          'contact-text': 'មានសំណួរអំពីផ្ការបស់យើង ឬត្រូវការជំនួយជាមួយការរៀបចំផ្ទាល់? យើងនឹងរីករាយនឹងការស្តាប់ពីអ្នក!',
+          'contact-phone-label': '📞 ទូរស័ព្ទ:',
+          'contact-email-label': '✉️ អ៊ីមែល:',
+          'form-name': 'ឈ្មោះ',
+          'form-email': 'អ៊ីមែល',
+          'form-message': 'សារ',
+          'form-submit': 'ផ្ញើសារ',
+          'footer-lecturer-label': 'គ្រូបង្រៀន:',
+          'footer-lecturer-value': 'Kru wwe',
+          'footer-student-label': 'ឈ្មោះសិស្ស:',
+          'footer-student-value': 'Chet Lisha',
+          'footer-class-label': 'ថ្នាក់:',
+          'footer-class-value': 'SW8',
+          'footer-year-label': 'ឆ្នាំ:',
+          'footer-year-value': 'ឆ្នាំទី 1 សមេស្តរទី 2',
+          'footer-subject-label': 'មុខវិជ្ជា:',
+          'footer-subject-value': 'ការអភិវឌ្ឍន៍គេហទំព័រ',
+          'footer-exam-label': 'ការប្រឡងចុងក្រោយ:',
+          'footer-exam-value': '១៣ តុលា ២០២៥',
+          'footer-copyright': 'Chet Lisha Flowers. រក្សាសិទ្ធិទាំងអស់។'
+        }
+      };
+
+      let currentLang = localStorage.getItem('language') || 'en';
+
+      function updateLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('language', lang);
+        document.getElementById('htmlLang').setAttribute('lang', lang);
+        document.getElementById('langSwitch').textContent = lang === 'en' ? 'KM' : 'EN';
+        
+        // Handle about text with nested HTML
+        const aboutText1 = document.getElementById('about-text1');
+        if (aboutText1) {
+          const strong1Text = translations[lang]['about-strong1'];
+          const strong2Text = translations[lang]['about-strong2'];
+          if (lang === 'en') {
+            aboutText1.innerHTML = `We offer <strong>${strong1Text}</strong> for all occasions, sourced from <strong>${strong2Text}</strong>.`;
+          } else {
+            aboutText1.innerHTML = `យើងផ្តល់ជូននូវ<strong>${strong1Text}</strong>សម្រាប់រាល់ឱកាស ដែលមកពី<strong>${strong2Text}</strong>។`;
+          }
+        }
+        
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          if (translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+              element.placeholder = translations[lang][key];
+            } else if (element.tagName === 'LABEL') {
+              element.textContent = translations[lang][key];
+            } else {
+              element.textContent = translations[lang][key];
+            }
+          }
+        });
+      }
+
+      // Initialize language on load
+      updateLanguage(currentLang);
+
+      // Language switch button
+      document.getElementById('langSwitch').addEventListener('click', function() {
+        const newLang = currentLang === 'en' ? 'km' : 'en';
+        updateLanguage(newLang);
+      });
+
+      // Mobile menu toggle
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const navMenu = document.getElementById('navMenu');
+      
+      if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+          mobileMenuToggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+          link.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
+          });
+        });
+      }
+
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // Form submission
+      document.querySelector('.contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your message! We will get back to you soon.');
+        this.reset();
+      });
+    </script>
+  </body>
+</html>
+
